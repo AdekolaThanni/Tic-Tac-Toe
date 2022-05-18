@@ -1,0 +1,99 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: rgb(130, 218, 48);
+    padding: 0 3rem;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(12rem, 30rem));
+    grid-template-rows: repeat(3, 15rem) min-content;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.game-grid > div {
+    position: relative;
+}
+
+.game-grid span {
+    font-size: 7rem;
+    font-family: sans-serif;
+    text-align: center;
+    display: inline-block;
+    color:  white;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grid-box-1 {
+    border-right: 3px solid rgb(90, 90, 90);
+    border-bottom: 3px solid rgb(90, 90, 90);
+}
+.grid-box-2 {
+    border-right: 3px solid rgb(90, 90, 90);
+    border-bottom: 3px solid rgb(90, 90, 90);
+}
+.grid-box-3 {
+    border-bottom: 3px solid rgb(90, 90, 90);
+}
+.grid-box-4 {
+    border-right: 3px solid rgb(90, 90, 90);
+    border-bottom: 3px solid rgb(90, 90, 90);
+}
+.grid-box-5 {
+    border-right: 3px solid rgb(90, 90, 90);
+    border-bottom: 3px solid rgb(90, 90, 90);
+}
+.grid-box-6 {
+    border-bottom: 3px solid rgb(90, 90, 90);
+}
+.grid-box-7 {
+    border-right: 3px solid rgb(90, 90, 90);
+}
+.grid-box-8 {
+    border-right: 3px solid rgb(90, 90, 90);
+}
+
+.red-background {
+    background-color: rgb(209, 31, 31);
+    border-color: rgb(209, 31, 31);
+}
+
+.blue-background {
+    background-color: rgb(58, 99, 211);
+    border-color: rgb(58, 99, 211);
+}
+
+.replay-button {
+    grid-column: 2 / 3; 
+    height: 5rem;
+    margin-top: 3rem;
+    border: none;
+}
+
+.replay-button:hover {
+    cursor: pointer;
+    background-color: rgba(255,255,255,.5)
+}
+
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 50%;
+    }
+}
